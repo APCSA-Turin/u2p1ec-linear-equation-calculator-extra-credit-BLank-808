@@ -124,11 +124,12 @@ y2=Integer.valueOf(point2.substring(l2+1, point2.indexOf(")")));
     //return "No symmetry";
     public String findSymmetry(){
         setmidpoint();
-        System.out.println(Mx+""+My);
+         // System.out.println(Mx+""+My); code to test midpoint in symmetry calcuklations
         if (y1==y2)
         { return "Symmetric about the y-axis";}
         if(x1==x2){ return "Symmetric about the x-axis";}
         if ((Mx==0.0)&&(My==0.0)){return "Symmetric about the origin";}
+        //if all oother tests it will default to no symmatry
     return "No symmetry";
     }
 
@@ -139,6 +140,7 @@ y2=Integer.valueOf(point2.substring(l2+1, point2.indexOf(")")));
         setmidpoint();
         return "The midpoint of this line is: "+"("+Mx+","+My+")";
     }
+    // void function to set mid point as due to how the tests are formated midpoint isnt set before symetry is tested
     public void setmidpoint(){
         Mx=x1+((x2-x1) / 2.0);
         My=(slope()*Mx)+yInt();
